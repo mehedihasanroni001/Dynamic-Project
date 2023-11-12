@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHero Tube Web Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header >
+        <nav class="max-w-screen-xl px-8 md:px-10 lg:px-14 m mx-auto mt-10">
+            <div class=" sm:flex justify-between items-center mb-5 mx-auto w-fit sm:w-full space-y-4 lg:space-y-0">
+                <div><img src="./icon/Logo.png" alt=""></div>
+                <button class="px-4 py-2 bg-gray-300 text-black rounded-lg font-semibold" onclick="SortViewBtn()">Sort by view</button>
+
+                <a href="./block.html" class="px-3 py-2 bg-red-500 text-white rounded-lg font-semibold" >Blog</a>
+            </div>
+            <hr>
+        </nav>
+
+    </header>
+
+    <main class="max-w-screen-xl px-8 md:px-10 lg:px-14 mx-auto mt-10">
+        <section>
+
+            <!-- Categorie show by Button -->
+            <div class="w-fit mx-auto my-10">
+                <div class=" join space-x-4 " id="CatagoyItems">
+
+                </div>
+            </div>
+
+
+            <!--  Loading  Bar-->
+            <div class="hidden" id="LoadingBar">
+                <div class="flex justify-center py-20 ">
+                    <span class="loading loading-spinner loading-lg w-[6rem] bg-red-500"></span>
+                </div>
+            </div>
+
+            <!-- Categorie Container not found -->
+            <div id="CategorieContainerNotFound" class="hidden">
+                <div class="flex items-center justify-center ">
+                    <div class="">
+                        <img src="./fi_5301987.svg" alt="" class="ml-20">
+                        <h2 class="font-medium text-3xl text-center mt-5">Oops!! Sorry, There is no <br> content here</h2>
+                    </div>
+                    </div>
+            </div>
+
+            <!-- Categorie Container -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-fit mx-auto" id="CategorieContainer">
+
+        </div>
+        </section>
+
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
